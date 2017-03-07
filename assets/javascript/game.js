@@ -1,12 +1,12 @@
 
 $(document).ready(function() {
 
+//defining all global variables
 var crystalOne = 0; var crystalTwo = 0; var crystalThree = 0; var crystalFour = 0;
 var randomGoal = 0; var currentScore = 0;
 var gameWins = 0; var gameLosses = 0;
-// var chosen_word = ""; var chosen_word_array= []; var word_blank_array = [];
-// var guess_left =10; var loss = 0; var win = 0; var guess_correct = false;
 
+//assigning random target 19-120
 function assign_goal_points(){
 	randomGoal = 19 + Math.floor(Math.random() * 101);
 };
@@ -17,7 +17,8 @@ function assign_goal_points(){
 // };
 // TODO: figure out why above function wasn't working
 
-	function assign_crystal_points(){
+//assign crystal values, console log for 'cheating' and to make sure it is working can be commented out
+function assign_crystal_points(){
  	crystalOne = Math.ceil(Math.random() * 12);
  	crystalTwo = Math.ceil(Math.random() * 12);
  	crystalThree = Math.ceil(Math.random() * 12);
@@ -28,6 +29,7 @@ function assign_goal_points(){
  	console.log(crystalFour);
 };
 
+//start of gamem function, resets global variables, crystal/target values, updates html
 function start(){
 	currentScore = 0;
 	assign_goal_points();
@@ -42,14 +44,13 @@ function start(){
 	$(".loss").html(gameLosses);
 	$("#game-goal").html(randomGoal);
 	$("#game-current-score").html(currentScore);
-	// $(".blank").html(word_blank_array);
-	// guess_left =10;
-	// $(".guess_left").html(guess_left);
-	// $(".letter_guessed").html("");
 
 };
+
+//running the start of game function
 start();
 
+//on-click functions for each of the four crystals, which reset the start function if game is won/lost
 $("#crystal-one-button").on("click", function() {
     currentScore += crystalOne;
 	$("#game-current-score").html(currentScore);
