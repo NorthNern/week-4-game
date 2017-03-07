@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Hangman</title>
+  	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  	<link rel="stylesheet" type=text/css href="assets/css/bootstrap.css">
+  	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <meta name="viewport" content="width-device-width", initial-scale-1">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  </head>
+  <body>
+	
+<div class="container" style="margin-top:50px;">
+  <div class="row">
+    <div class="col-sm-12" id = "game-title">
+        <p>Crystal Collectors!</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12" id = "game-instructions">
+        <p>You will be given a random number at the start of the game.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12" id = "game-wins">
+      
+      <p>Wins: <span class="win"></span></p>
+      <p>Losses: <span class="loss"></span></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <p>Target Score:  <span id="game-goal"></span></p>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-12" id = "game-crystals">
+        <button class="btn btn-default btn-lg" id="crystal-one-button"><span class="crystal-one"></span> Crystal 1</button>
+        <button class="btn btn-primary btn-lg" id="crystal-two-button"><span class="crystal-two"></span> Crystal 2</button>
+        <button class="btn btn-danger btn-lg" id="crystal-three-button"><span class="crystal-three"></span> Crystal 3</button>
+        <button class="btn btn-warning btn-lg" id="crystal-four-button"><span class="crystal-four"></span> Crystal 4</button>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-12">
+      <p>Current Score: <span id = "game-current-score"></span></p>
+    </div>
+  </div>
+
+
+  	<div class="row">
+  		<div class="col-sm-12 img-responsive center-block" id = "game-picture"></div><br>
+  	</div>
+  	<div class= "row">
+  		<div class="col-sm-12 center-block" id = "game-guesses"></div><br>
+  	</div>
+	<div class="row">
+		<div class="col-sm-12" id = "game-text"></div>
+	</div>
+</div>	
+	
+	
+
+ <script type="text/javascript" src="assets/javascript/game.js"></script>
+  </body>
+</html>
